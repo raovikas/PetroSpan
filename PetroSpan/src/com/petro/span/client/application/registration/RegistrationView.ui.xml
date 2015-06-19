@@ -1,0 +1,142 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:with type="com.petro.span.client.resources.Resources"
+		field="res"></ui:with>
+
+	<g:LayoutPanel ui:field="registrationPageLayout"
+		styleName="{res.style.pageBackgroundView}">
+
+		<g:layer left="10%" width="30%" top="30%" height="60%">
+			<g:Image resource="{res.Bg_logo}" styleName="{res.style.imgLogo}"></g:Image>
+		</g:layer>
+
+
+		<g:layer left="45%" width="26%" top="17%" height="3%">
+
+
+
+			<g:SimpleLayoutPanel ui:field="messageDisplayPanel">
+
+			</g:SimpleLayoutPanel>
+
+
+		</g:layer>
+
+		<g:layer left="45%" width="26%" top="20%" height="64%">
+
+
+
+
+
+
+			<g:LayoutPanel styleName="{res.style.loginwrap}"
+				ui:field="registrationFormLayout">
+				<g:layer left="19%" top="5%" height="5%" width="62%">
+
+					<g:InlineLabel wordWrap="false" styleName="inline"> User
+						Registration Form
+					</g:InlineLabel>
+
+				</g:layer>
+
+
+
+
+
+				<g:layer left="13%" top="12%" height="10%" width="74%">
+					<g:TextBox ui:field="userName" width="250px" height="25px"
+						styleName="{res.style.imgLogo}" />
+				</g:layer>
+
+
+				<g:layer left="13%" top="24%" height="10%" width="74%">
+					<g:TextBox ui:field="emailAddress" width="250px" height="25px"
+						styleName="{res.style.imgLogo}" />
+				</g:layer>
+
+
+				<g:layer left="13%" top="36%" height="10%" width="74%">
+					<g:TextBox ui:field="loginName" width="250px" height="25px"
+						styleName="{res.style.imgLogo}" />
+				</g:layer>
+
+
+				<g:layer left="13%" top="48%" height="10%" width="74%">
+					<g:PasswordTextBox ui:field="password" width="250px"
+						height="25px" styleName="{res.style.imgLogo}" />
+				</g:layer>
+
+				<g:layer left="13%" top="60%" height="10%" width="74%">
+					<g:PasswordTextBox ui:field="confirmPassword"
+						width="250px" height="25px" styleName="{res.style.imgLogo}" />
+				</g:layer>
+
+				<g:layer left="13%" top="72%" height="8%" width="74%">
+					<g:FlowPanel>
+						<g:RadioButton name="maleRadio" text="Male"
+							wordWrap="false" ui:field="maleRadio" />
+						<g:RadioButton name="maleRadio" text="Female"
+							wordWrap="false" ui:field="femaleRadio" />
+					</g:FlowPanel>
+				</g:layer>
+
+				<g:layer left="13%" top="81%" height="10%" width="74%">
+					<g:Button ui:field="signUpButton" text="SignUp"
+						styleName="{res.style.loginButton} {res.style.imgLogo} " width="255px"
+						height="30px" />
+				</g:layer>
+
+				<g:layer left="13%" top="91%" height="4%" width="74%">
+					<g:InlineHyperlink targetHistoryToken="login">
+						Already On PetroSpan? Sign in
+					</g:InlineHyperlink>
+				</g:layer>
+
+			</g:LayoutPanel>
+
+
+		</g:layer>
+
+
+	
+		<!-- <g:layer left="71%" top="52%" height="26%" width = "20%">  -->
+		<g:layer left="0%" top="0%" height="0%" width = "0%">
+		
+			<g:HTMLPanel ui:field="passInstructionPanel"  styleName="{res.style.failure}">
+				<p>
+					The Password Policy is :
+					<ul>
+						<li>At least 8 chars</li>
+						<li>Contains at least one digit</li>
+						<li>Contains at least one lower alpha char and one upper alpha char</li>
+						<li>Contains at least one char within a set of special chars (@#%$^ etc.)</li>
+						<li>Does not contain space, tab, etc.</li>
+						
+					</ul>
+				</p>
+			</g:HTMLPanel>
+			
+		</g:layer>
+		
+		
+		<!--  <g:layer left="13%" top="24%" height="10%" width="74%"> -->
+		
+		<g:layer left = "0%" top="0%" height="0%" width = "0%">
+		   <g:HTMLPanel  ui:field="mailMsgLayoutPanel"   styleName="{res.style.failure}">
+		    <div>This email is already in use</div>
+		   </g:HTMLPanel>
+		</g:layer>
+		    
+		
+		<g:layer left = "0%" top="0%" height="0%" width = "0%">
+		 
+		    <g:HTMLPanel ui:field="loginNameMsgLayoutPanel"   styleName="{res.style.failure}">
+		     <div>This Login Name is already in use</div>
+		    </g:HTMLPanel>
+		  
+	    </g:layer>  
+
+
+	</g:LayoutPanel>
+</ui:UiBinder>

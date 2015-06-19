@@ -1,0 +1,14 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:p1="urn:import:com.petro.span.client.application.common.filter">
+
+	<g:DockLayoutPanel ui:field="dockLayoutPanel" unit="PCT">
+		<g:west size="23">
+
+			<p1:CommonFilter ui:field="commonFilter" />
+
+		</g:west>
+
+	</g:DockLayoutPanel>
+
+</ui:UiBinder>

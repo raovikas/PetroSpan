@@ -1,0 +1,178 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:w='urn:import:com.petro.span.client.application.ui'
+	xmlns:p1="urn:import:com.google.gwt.user.datepicker.client" xmlns:p3="urn:import:com.petro.span.client.application.common.filter">
+
+	<ui:style>
+	.menu {
+		background-color: #E0E7F0;
+		border: 5px solid Gray;
+		margin-left: 5px;
+		margin-top: 5px;
+	}
+	
+	.layoutPanelStyle {
+		/* border: 2px solid red; */
+		
+	}
+	
+	.sidePanelLayout {
+		background-color: #F4F4EE;
+	}
+	</ui:style>
+
+
+
+	<g:DockLayoutPanel ui:field="dockLayoutPanel" unit="PCT">
+		<g:west size="23">
+
+			<p3:DefaultCommonFilter ui:field="byDefaultFilter" />
+
+		</g:west>
+
+		<g:center>
+			<g:LayoutPanel ui:field="contentLayoutPanel">
+
+				<!-- Heat Map Description Widget Position -->
+
+				<g:layer top="0%" height="5%" left="1%" width="48%">
+					<!--	<g:SimpleLayoutPanel ui:field="heatMapDiscriptionPanel">
+						<w:WidgetDescription ui:field="heatMapDiscription"></w:WidgetDescription>
+					</g:SimpleLayoutPanel>-->
+					
+				 <g:SimpleLayoutPanel ui:field="fusionMapDiscriptionPanel">
+						<w:WidgetDescription ui:field="fusionMapDiscription"></w:WidgetDescription>
+					</g:SimpleLayoutPanel>  
+				</g:layer>
+
+				<!-- Heat Map Widget Position -->
+
+				<g:layer top="5%" height="43%" left="1%" width="48%">
+					<!--  <g:SimpleLayoutPanel ui:field="heatMapPanel"
+						addStyleNames="{style.layoutPanelStyle}" /> -->
+						
+						<g:SimpleLayoutPanel ui:field="fusionMapPanel"
+						addStyleNames="{style.layoutPanelStyle}" />
+				</g:layer>
+
+				<!-- Chart1 Description Widget Position -->
+
+				<g:layer top="50%" height="5%" left="1%" width="48%">
+					<g:SimpleLayoutPanel ui:field="chart1DiscriptionPanel">
+						<w:WidgetDescription ui:field="chart1Discription"></w:WidgetDescription>
+					</g:SimpleLayoutPanel>
+				</g:layer>
+
+				<!-- Chart1 Widget Position -->
+
+				<g:layer left="1%" width="48%" top="55%" height="43%">
+					<g:SimpleLayoutPanel ui:field="chartPanel1"
+						addStyleNames="{style.layoutPanelStyle}" />
+				</g:layer>
+
+				<!-- Fusion Map Description Widget Position -->
+
+				<g:layer top="0%" height="5%" left="50%" width="48%">
+					<!-- <g:SimpleLayoutPanel ui:field="fusionMapDiscriptionPanel">
+						<w:WidgetDescription ui:field="fusionMapDiscription"></w:WidgetDescription>
+					</g:SimpleLayoutPanel>  -->
+					
+					<g:SimpleLayoutPanel ui:field="heatMapDiscriptionPanel">
+						<w:WidgetDescription ui:field="heatMapDiscription"></w:WidgetDescription>
+					</g:SimpleLayoutPanel>
+				</g:layer>
+
+				<!-- Fusion Map Widget Position -->
+
+				<g:layer left="50%" width="48%" top="5%" height="43%">
+				<!-- 	<g:SimpleLayoutPanel ui:field="fusionMapPanel"
+						addStyleNames="{style.layoutPanelStyle}" />  -->
+						
+						<g:SimpleLayoutPanel ui:field="heatMapPanel"
+						addStyleNames="{style.layoutPanelStyle}" />
+				</g:layer>
+
+
+				<!-- Chart2 Description Widget Position -->
+
+				<g:layer top="50%" height="5%" left="50%" width="48%">
+					<g:SimpleLayoutPanel ui:field="chart2DiscriptionPanel">
+						<w:WidgetDescription ui:field="chart2Discription"></w:WidgetDescription>
+					</g:SimpleLayoutPanel>
+				</g:layer>
+
+				<!-- Chart2 Widget Position -->
+				<g:layer left="50%" width="48%" top="55%" height="43%">
+					<g:SimpleLayoutPanel ui:field="chartPanel2"
+						addStyleNames="{style.layoutPanelStyle}" />
+				</g:layer>
+
+
+			</g:LayoutPanel>
+
+
+		</g:center>
+
+	</g:DockLayoutPanel>
+
+	<!-- <g:SplitLayoutPanel ui:field="splitLayoutPanel"> <g:west size="550"> 
+		<g:LayoutPanel ui:field="sideScrollLayout"> <g:layer left="0%" height="100%" 
+		width="100%" top="0%"> <g:ScrollPanel ui:field="sideScrollPanel" addStyleNames="{style.sidePanelLayout} 
+		{style.menu}"> <g:Grid ui:field="grid" cellSpacing="10"> <g:row> <g:customCell> 
+		<g:Label text="Play :" /> </g:customCell> <g:customCell> <g:SuggestBox width="93px" 
+		height="10px" ui:field="playSuggestBox" /> </g:customCell> <g:customCell> 
+		<g:Label text="State :" horizontalAlignment="ALIGN_RIGHT" /> </g:customCell> 
+		<g:customCell> <g:ListBox width="102px" ui:field="stateCombo" /> </g:customCell> 
+		</g:row> <g:row> <g:customCell> <g:Label text="Location :" /> </g:customCell> 
+		<g:customCell> <g:ListBox ui:field="locationCombo" width="102px" /> </g:customCell> 
+		</g:row> <g:row> <g:customCell> <g:Label text="Search :" /> </g:customCell> 
+		<g:customCell> <g:ListBox ui:field="searchCombo" width="102px" /> </g:customCell> 
+		</g:row> <g:row> <g:customCell> <g:Label text="Quality Zone :" wordWrap="false" 
+		horizontalAlignment="ALIGN_LEFT" /> </g:customCell> <g:customCell> <g:ListBox 
+		width="102px" ui:field="qualityZoneListBox" /> </g:customCell> <g:customCell> 
+		<g:Label text="County :" wordWrap="false" horizontalAlignment="ALIGN_RIGHT" 
+		/> </g:customCell> <g:customCell> <g:ListBox width="102px" ui:field="countyListBox" 
+		/> </g:customCell> </g:row> <g:row> <g:customCell> <g:Label text="TownShip/Range 
+		:" wordWrap="false" horizontalAlignment="ALIGN_LEFT" /> </g:customCell> <g:customCell> 
+		<g:ListBox width="102px" ui:field="townShipListBox" /> </g:customCell> <g:customCell> 
+		<g:Label text="Well Type :" horizontalAlignment="ALIGN_RIGHT" /> </g:customCell> 
+		<g:customCell> <g:ListBox ui:field="wellTypeListBox" width="102px" /> </g:customCell> 
+		</g:row> <g:row> <g:customCell> <g:Label text="Operator :" horizontalAlignment="ALIGN_LEFT" 
+		/> </g:customCell> <g:customCell> <g:ListBox ui:field="operatorListBox" width="102px" 
+		/> </g:customCell> <g:customCell> <g:Label text="API :" horizontalAlignment="ALIGN_RIGHT" 
+		/> </g:customCell> <g:customCell> <g:ListBox width="102px" ui:field="apiListBox" 
+		/> </g:customCell> </g:row> <g:row> <g:customCell> <g:Label text="Well Name 
+		:" horizontalAlignment="ALIGN_LEFT" /> </g:customCell> <g:customCell> <g:ListBox 
+		width="102px" ui:field="wellNameListBox" /> </g:customCell> <g:customCell> 
+		<g:Label text="Lease Name :" horizontalAlignment="ALIGN_RIGHT" /> </g:customCell> 
+		<g:customCell> <g:ListBox width="102px" ui:field="leaseNameListBox" /> </g:customCell> 
+		</g:row> <g:row> <g:customCell> <g:Label text="Well Status :" /> </g:customCell> 
+		<g:customCell> <g:ListBox width="102px" ui:field="wellStatusListBox" /> </g:customCell> 
+		<g:customCell> <g:Label text="Orientation" horizontalAlignment="ALIGN_RIGHT" 
+		/> </g:customCell> <g:customCell> <g:ListBox width="102px" ui:field="orientationListBox" 
+		/> </g:customCell> </g:row> <g:row> <g:customCell> <g:Label text="Fluid Type 
+		:" /> </g:customCell> <g:customCell> <g:ListBox width="102px" ui:field="fluidTypeListBox" 
+		/> </g:customCell> </g:row> <g:row> <g:customCell> <g:Label text="Permit 
+		Date :" /> </g:customCell> <g:customCell> <p1:DateBox width="93px" height="10px" 
+		ui:field="permitDate" /> </g:customCell> <g:customCell> <g:Label text="Spud 
+		Date :" horizontalAlignment="ALIGN_RIGHT" /> </g:customCell> <g:customCell> 
+		<p1:DateBox width="93px" height="10px" ui:field="spudDate" /> </g:customCell> 
+		</g:row> <g:row> <g:customCell> <g:Label text="Completion Date :" /> </g:customCell> 
+		<g:customCell> <p1:DateBox width="93px" height="10px" ui:field="completionDate" 
+		/> </g:customCell> <g:customCell> <g:Label text="First Production Date :" 
+		wordWrap="false" /> </g:customCell> <g:customCell> <p1:DateBox width="93px" 
+		height="10px" ui:field="productionDate" /> </g:customCell> </g:row> </g:Grid> 
+		</g:ScrollPanel> </g:layer> </g:LayoutPanel> </g:west> </g:SplitLayoutPanel> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ui:UiBinder>

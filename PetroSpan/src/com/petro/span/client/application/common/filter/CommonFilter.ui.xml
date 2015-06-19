@@ -1,0 +1,269 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:p1="urn:import:com.petro.span.client"
+	xmlns:p2="urn:import:com.petro.span.client">
+	<ui:style>
+	.menu {
+		background-color: #E0E7F0;
+		border: 5px solid Gray;
+		margin-left: 5px;
+		/*margin-top: 5px; */
+	}
+	
+	.sidePanelLayout {
+		background-color: #F4F4EE;
+	}
+	</ui:style>
+	<!-- Remember that in Layout Panel their is combination of (height,top) 
+		and (left,width) to set position -->
+	<g:LayoutPanel ui:field="sideScrollLayout">
+	
+	    
+	    
+		<g:layer left="0%" width ="100%" >
+
+		
+			<g:ScrollPanel ui:field="sideScrollPanel"  addStyleNames="{style.sidePanelLayout} {style.menu}">
+			
+				<g:Grid ui:field="grid" cellSpacing="10">
+					<g:row>
+						<g:customCell>
+							<g:Label text="Play :" horizontalAlignment="ALIGN_LEFT" />
+						</g:customCell>
+						<!-- <g:customCell>
+							<g:SuggestBox width="93px" height="10px" ui:field="playSuggestBox" />
+						</g:customCell>  -->
+						<g:customCell>
+							<g:ListBox ui:field="playCombo" width="106px"/>
+						</g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell>
+							<g:Label text="State :" horizontalAlignment="ALIGN_LEFT" />
+						</g:customCell>
+						<g:customCell>
+							<g:ListBox width="102px" ui:field="stateCombo" />
+						</g:customCell>
+					</g:row>
+
+					<g:row>
+						<g:customCell>
+							<g:Label text="County :" wordWrap="false"
+								horizontalAlignment="ALIGN_LEFT" />
+						</g:customCell>
+						<g:customCell>
+							<g:ListBox width="102px" ui:field="countyListBox" />
+						</g:customCell>
+
+					</g:row>
+					<g:row>
+						<g:customCell>
+							<g:Label text="Quality Zone :" wordWrap="false"
+								horizontalAlignment="ALIGN_LEFT" width="102px" />
+						</g:customCell>
+						<g:customCell>
+							<g:ListBox width="102px" ui:field="qualityZoneListBox" />
+						</g:customCell>
+					</g:row>
+
+					<g:row>
+						<g:customCell>
+							<g:Label text="TownShip/Range :" wordWrap="false"
+								horizontalAlignment="ALIGN_LEFT" />
+						</g:customCell>
+						<g:customCell>
+							<g:ListBox width="102px" ui:field="townShipListBox" />
+						</g:customCell>
+					</g:row>
+
+					<g:row>
+						<g:customCell>
+							<g:Label text="Operator :" horizontalAlignment="ALIGN_LEFT" />
+						</g:customCell>
+						<g:customCell>
+							<g:ListBox ui:field="operatorListBox" width="102px" />
+						</g:customCell>
+					</g:row>
+
+
+					<g:row>
+						<g:customCell>
+							<g:Label text="Lease Name :" horizontalAlignment="ALIGN_LEFT" />
+						</g:customCell>
+						<g:customCell>
+							<g:ListBox width="102px" ui:field="leaseNameListBox" />
+						</g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell>
+							<g:Label text="Well Name :" horizontalAlignment="ALIGN_LEFT" />
+						</g:customCell>
+						<g:customCell>
+							<g:ListBox width="102px" ui:field="wellNameListBox" />
+						</g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell>
+							<g:Label text="Well Type :" horizontalAlignment="ALIGN_LEFT" />
+						</g:customCell>
+						<g:customCell>
+							<g:ListBox ui:field="wellTypeListBox" width="102px" />
+						</g:customCell>
+					</g:row>
+
+					<g:row>
+						<g:customCell>
+							<g:Label text="Well Orientation :" horizontalAlignment="ALIGN_LEFT" width="136px" />
+						</g:customCell>
+						<g:customCell>
+							<g:ListBox width="102px" ui:field="orientationListBox" />
+						</g:customCell>
+					</g:row>
+
+					<g:row>
+						<g:customCell>
+							<g:Label text="Fluid Type :" horizontalAlignment="ALIGN_LEFT" />
+						</g:customCell>
+
+						<g:customCell>
+							<g:ListBox width="102px" ui:field="fluidTypeListBox" />
+						</g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell>
+							<g:Label text="Well Status :" horizontalAlignment="ALIGN_LEFT" />
+						</g:customCell>
+						<g:customCell>
+							<g:ListBox width="102px" ui:field="wellStatusListBox" />
+						</g:customCell>
+
+					</g:row>
+
+
+
+
+
+					<g:row>
+						<g:customCell>
+							<g:Label text="Producing Zone :" horizontalAlignment="ALIGN_LEFT"/>
+						</g:customCell>
+						<g:customCell>
+							<g:ListBox ui:field="producingZoneCombo" width="102px"/>
+						</g:customCell>
+
+					</g:row>
+					<g:row>
+						<g:customCell>
+							<g:Label text="Permit Date :" horizontalAlignment="ALIGN_LEFT" />
+						</g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell>
+							<g:Label text=" From  :" horizontalAlignment="ALIGN_RIGHT" width="110px"/>
+						</g:customCell>
+						<g:customCell>
+							<p1:CustomDateBox width="93px" height="10px" ui:field="permitDateFrm" />
+						</g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell>
+							<g:Label text="To :" horizontalAlignment="ALIGN_RIGHT" width="110px"/>
+						</g:customCell>
+						<g:customCell>
+							<p1:CustomDateBox width="93px" height="10px" ui:field="permitDateTo"/>
+						</g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell>
+							<g:Label text="Spud Date :" horizontalAlignment="ALIGN_LEFT" width="156" />
+						</g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell>
+							<g:Label text="From :" horizontalAlignment="ALIGN_RIGHT" width="110px"/>
+						</g:customCell>
+						<g:customCell>
+							<p1:CustomDateBox width="93px" height="10px" ui:field="spudDateFrm" />
+						</g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell>
+							<g:Label text="To :" horizontalAlignment="ALIGN_RIGHT" width="110px"/>
+						</g:customCell>
+						<g:customCell>
+							<p1:CustomDateBox width="93px" height="10px" ui:field="spudDateTo"/>
+						</g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell>
+							<g:Label text="Completion Date :" width="116px" wordWrap="false" horizontalAlignment="ALIGN_LEFT" />
+						</g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell>
+							<g:Label text="From :" horizontalAlignment="ALIGN_RIGHT" width="110px"/>
+						</g:customCell>
+						<g:customCell>
+							<p1:CustomDateBox width="93px" height="10px" ui:field="completionDateFrm" />
+						</g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell>
+							<g:Label text="To :" horizontalAlignment="ALIGN_RIGHT" width="110px"/>
+						</g:customCell>
+						<g:customCell>
+							<p1:CustomDateBox width="93px" height="10px" ui:field="completionDateTo"/>
+						</g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell>
+							<g:Label text="First Production Date :" wordWrap="false" styleName="myLabel" horizontalAlignment="ALIGN_LEFT" />
+						</g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell>
+							<g:Label text="From :" horizontalAlignment="ALIGN_RIGHT" width="110px"/>
+						</g:customCell>
+						<g:customCell>
+							<p1:CustomDateBox width="93px" height="10px" ui:field="productionDateFrm" />
+						</g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell>
+							<g:Label text="To :" horizontalAlignment="ALIGN_RIGHT" width="110px"/>
+						</g:customCell>
+						<g:customCell>
+							<p1:CustomDateBox width="93px" height="10px" ui:field="productionDateTo"/>
+						</g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell>
+							<g:Label text="Search By:" horizontalAlignment="ALIGN_LEFT" />
+						</g:customCell>
+						<g:customCell>
+							<g:ListBox ui:field="searchByCombo" width="102px" />
+						</g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell>
+							<g:Button width="93px" height="30px" ui:field="searchButton">Search</g:Button>
+						</g:customCell>
+						<!-- <g:customCell>
+							<g:SuggestBox width="93px" height="10px" ui:field="searchCombo"/>
+						</g:customCell>  -->
+						<g:customCell>
+							<g:TextBox ui:field="searchTextBox" width="93px" height="10px"/>
+						</g:customCell>
+					</g:row>
+					
+
+
+				</g:Grid>
+			</g:ScrollPanel> 
+			
+			<!-- </p2:FocusScrollPanel> -->
+
+
+		</g:layer>
+	</g:LayoutPanel>
+</ui:UiBinder> 

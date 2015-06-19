@@ -1,0 +1,114 @@
+@CHARSET "ISO-8859-1";
+
+.logout {
+	color: green;
+	cursor: pointer !important;
+}
+
+.logout:hover {
+	text-decoration: underline;
+}
+
+.cursorPointer {
+	cursor: pointer;
+	cursor: hand;
+}
+
+.cursorPointer:hover {
+	text-decoration: underline;
+}
+
+.imgLogo {
+	/*max-width: 80%;
+	max-height: 100%; */
+	
+	max-width:100%; 
+	/*max-height: 100%;  */
+	 height:auto
+	
+} 
+.pageBackgroundView {
+	background: url(petroleum.jpg) no-repeat fixed center;
+	/* background-size:100%;
+	 font-family: 'PT Sans', sans-serif; */
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	font-family:calibri
+}
+
+.loginwrap {
+	
+	/* padding-left: 10%;
+	padding-top: 10%;
+	padding-right: 10%; */
+	/*background: rgba(213, 215, 222, 0.7);*/
+	background: rgba(225,225,225,0.9);
+}
+
+.loginButton {
+	margin: 0;
+	padding: 5px 7px;
+	text-decoration: none;
+	cursor: pointer;
+	cursor: hand;
+	font-size: small;
+	background-color: #00CC99;
+	/* background: url("images/hborder.png") repeat-x 0px -2077px; */
+	border: 1px solid #bbb;
+	border-bottom: 1px solid #a0a0a0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+
+.loginButton:active {
+	border: 1px inset #ccc;
+}
+
+.loginButton:hover {
+	border-color: #939393;
+}
+
+.loginButton[disabled] {
+	cursor: default;
+	color: #888;
+}
+
+.loginButton[disabled]:hover {
+	border: 1px outset #ccc;
+}
+
+
+.inline {
+	color: White;
+	font-stretch: wider;
+	font-size: 18px;
+	font-style: oblique;
+	font-weight: bold;
+}
+
+
+.success{
+   background-color:   #A1CDA1 ;
+   border-left: thin;
+   border-bottom: thin;
+   border-top: thin;
+ 
+    color:   #009900;
+}
+  
+  .success_img{
+    padding-top: 3%;
+  } 
+  
+  .failure{
+  
+  background-color: #FFB5B5;
+  color: #FF0000;
+   border-left: thin;
+   border-bottom: thin;
+   border-top: thin;
+  }
+
+
